@@ -1,0 +1,410 @@
+@import "normalize"; 
+
+/*----- FONT IMPORTS -----*/
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/avenir/AvenirLTStd-Book.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Avenir Next Condensed";
+  src: url("/fonts/avenir_next/AvenirNextLTPro-BoldCn.otf") format("otf");
+}
+
+/*----- COLOR PALETTE -----*/
+
+$brand-blue: #1C79BF;
+$light-blue: #4aa9ef;
+$dark-grey: #333333;
+
+/*----- GLOBAL STYLES -----*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Avenir", sans-serif;
+  font-size: 1rem;
+}
+
+/*----- UTILITIES -----*/
+
+.text-left {
+  text-align: left;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.px-20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.py-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+
+.pb-15 {
+  padding-bottom: 15px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-start {
+  align-items: flex-start !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.fixed-h-200 {
+  //min-height: 200px;
+  flex: 1 220px;
+}
+
+.h-200 {
+  height: 200px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+.slide-img {
+  align-self: flex-start;
+  width: 100%;
+  max-width: 600px;
+  padding-left: 20px;
+
+  &.slide-img-people {
+    max-width: 350px;
+    position: absolute;
+    top: 140px;
+  }
+}
+
+/*----- BORDERS FOR FLEXBOX TESTING -----*/
+
+.border-red {
+  border: 1px solid red;
+}
+
+.border-blue {
+  border: 1px solid blue;
+}
+
+.border-green {
+  border: 1px solid green;
+}
+
+
+/*----- TYPOGRAPHY -----*/
+
+h3 {
+  font-size: 48px;
+  line-height: 130%;
+
+  &.our-impact {
+    padding-top: 29px;
+    padding-bottom: 37px;
+  }
+
+  &.blue-number {
+    color: $brand-blue;
+    padding-top: 25px;
+    padding-bottom: 12px;
+  }
+}
+
+h4 {
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 130%;
+}
+
+.accent-text {
+  font-family: "Avenir", sans-serif;
+  font-weight: bold;
+
+  &.light-gray {
+    color: #B5B5B5;
+  }
+}
+
+p {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
+  color: $dark-grey;
+}
+
+span.year-title {
+  font-family: "Avenir Next Condensed";
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  span {
+    color: $brand-blue;
+  }
+}
+
+/*----- BUTTONS -----*/
+
+a.btn {
+  padding: 26px 43px;
+  width: fit-content;
+  background-color: $brand-blue;
+  color: white;
+  font-family: "Avenir Next Condensed";
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $light-blue;
+  }
+}
+
+/*----- SLIDER LAYOUT CONFIG -----*/
+
+.page {
+  //overflow: hidden;
+
+  header {
+    width: 100vw;
+    min-height: 100vh;
+    //overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header-elements {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 50px;
+      z-index: 100;
+      //border: 1px solid green;
+
+      h1 {
+        z-index: 100;
+        font-family: bely-display, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+      }
+    }
+
+  }
+}
+
+.glide {
+  height: 800px;
+}
+
+.glide__wrapper {
+  height: 100%;
+}
+
+.glide__slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  //background-color: red;
+  min-height: 700px;
+
+  & > div {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    //align-items: center;
+    //justify-content: center;
+  }
+
+  .slide-header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid $dark-grey;
+    padding-bottom: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .slide-content{
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+    //align-items: center;
+    //text-align: center;
+    flex: 1;
+  }
+}
+
+.glide__arrow {
+  border: none;
+  img {
+    width: 75px;
+  }
+}
+
+.glide--horizontal .glide__arrows {
+    top: 50%;
+    width: 98%;
+    margin-left: 1%;
+}
+
+.glide--horizontal .glide__bullets {
+  position: fixed;
+}
+
+.glide__bullets>* {
+  background-color: #33333336;
+  border: 0px !important;
+
+  &.active,
+  &:hover,
+  &:focus {
+    background-color: $brand-blue;
+  }
+}
+
+img.cc-logo {
+  width: 80px;
+}
+
+
+/*----- SLIDE 1 -----*/
+#slide-1 {
+
+  text-align: center;
+  h3 {
+    max-width: 653px;
+  }
+}
+
+
+/*----- SLIDE 2 -----*/
+#slide-2 {
+  flex-direction: row;
+
+  div {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+/*----- SLIDE 3 -----*/
+#slide-3 {
+
+  > div {
+    //flex: 1;
+    //height: 100%;
+  }
+}
+
+
+/*----- PARTICLES BACKGROUND -----*/
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background-color: #ffffff;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+
+  .particles-js-canvas-el {
+    position: fixed;
+  }
+}
+
+
+// Hide the arrows at smaller width
+@media screen and (max-width: 992px) {
+  .glide__arrows {
+    display: none;
+  }
+
+  #slide-2.slide-content {
+    flex-direction: column;
+  }
+
+  .d-none {
+    display: none;
+  }
+
+}
