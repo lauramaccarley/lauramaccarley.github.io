@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ol {
+    @apply list-decimal list-inside;
+  }
+  ul {
+    @apply list-disc list-inside;
+  }
+}
+
+@layer components {
+
+  .link-text {
+    @apply text-white hover:text-flame uppercase font-semibold tracking-wider text-sm;
+  }
+
+  .btn {
+    @apply link-text block w-max py-5 px-8 bg-flame rounded-full transition hover:bg-white focus:ring-4 focus:ring-flame !no-underline;
+  }
+
+  .btn-sm {
+    @apply py-3 px-5;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border border-2 border-white;
+  }
+
+}
+
+.scrolled {
+  @apply bg-gray-900;
+}
+
+/* Default section padding */
+.section-padding {
+  @apply py-10 md:py-14 lg:py-24;
+}
+
+/* Default gradient overlay */
+.bg-gradient-overlay {
+  @apply bg-gradient-to-r from-gray-900 to-transparent w-full h-full;
+}
+
+/* Default flat overlay */
+.flat-overlay {
+  @apply bg-gray-900/75;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold text-gray-900;
+}
+
+h1 {
+  @apply text-3xl md:text-4xl lg:text-6xl mb-8;
+}
+
+h2 {
+  @apply text-2xl lg:text-4xl mb-6;
+}
+
+h3 {
+  @apply text-lg lg:text-xl mb-2;
+}
+
+h3, h4, h5, h6 {
+  @apply text-lg mb-2;
+}
+
+.pre-header {
+  @apply text-flame uppercase font-semibold tracking-wider mb-2 block;
+}
+
+p {
+  @apply text-base text-gray-600;
+}
+
+a {
+  @apply text-gray-100 hover:text-flame hover:underline underline-offset-8 transition;
+}
+
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6 {
+  @apply text-white;
+}
+
+.dark-theme p,
+.dark-theme ol {
+  @apply text-gray-100;
+}
+
+/* ACCORDION */
+ul.accordion {
+  @apply divide-y divide-white first:border-t last:border-b;
+}
+
+ul.accordion .inner {
+  @apply pb-8 overflow-hidden;
+}
+
+ul.accordion .inner p,
+ul.accordion .inner ol,
+ul.accordion .inner ul {
+  @apply text-base lg:text-lg;
+}
+
+ul li a.toggle {
+  @apply text-lg lg:text-2xl font-bold w-full transition py-8 no-underline hover:text-flame;
+}
+
+ul li a.toggle .plus,
+ul li a.toggle.show .minus {
+  @apply block;
+}
+
+ul li a.toggle .minus,
+ul li a.toggle.show .plus {
+  @apply hidden;
+}
+
+/* MODAL */
+.modal {
+  @apply bg-flame p-12 z-50 absolute top-0 left-0 w-full dark-theme;
+  visibility: hidden;
+}
+
+.modal.is-visible {
+  visibility: visible;
+}
+
+.modal-wrapper {
+  @apply p-12 bg-gray-900 fixed top-0 bottom-0 left-0 overflow-y-scroll;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background: none;
+  border: 0;
+}
+
+/* MOBILE MENU */
+body.modal-open {
+  overflow: hidden;
+}

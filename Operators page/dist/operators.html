@@ -1,0 +1,410 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery/jquery-3.6.0.min.js"></script>
+  <!-- Primary JS file -->
+  <script type="text/javascript" src="js/main.js"></script>
+  <!-- Feather icons -->
+  <script src="js/feather-icons/feather.min.js"></script>
+  <!-- Primary CSS file -->
+  <link href="styles.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen relative">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="py-5 fixed w-full top-0 z-20 transition">
+    <div class="container flex justify-between items-center">
+      <img src="assets/buslane_logo_white.png" alt="Buslane Logo" class="h-6 md:h-8">
+      <div class="hidden md:flex justify-between items-center gap-8">
+        <a href="#" class="link-text">Sign in</a>
+        <a href="#" class="btn btn-sm btn-outline">Book a demo</a>
+      </div>
+      <!-- Hamburger menu icon to open mobile menu -->
+      <button aria-label="Open navigation" class="mobile-toggle md:hidden">
+        <i data-feather="menu" class="text-white"></i>
+      </button>
+    </div>
+  </nav><!-- End Navbar -->
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="bg-gray-900 fixed overflow-y-hidden w-full h-screen pt-24 px-6 z-50">
+    <button aria-label="Close navigation" class="mobile-toggle absolute top-7 right-7">
+      <i data-feather="x" class="text-white icon-close icon"></i>
+    </button>
+    <div class="flex flex-col items-center gap-12">
+      <a href="#" class="btn w-full text-center">Book a demo</a>
+      <a href="#" class="link-text">Sign in</a>
+    </div>
+  </div><!-- End Mobile menu -->
+
+  <!-- Modal
+  <div class="modal">
+
+    <div class="modal-wrapper">
+      <button class="modal-close modal-toggle">
+        <i data-feather="x" class="text-white icon-close icon"></i>
+      </button>
+
+      <h2 class="modal-heading">Apply to be a Buslane operator today</h2>
+      <p>
+        Fill out the form below and a member of our team will be in touch within 48hrs.
+      </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit eum delectus, libero, accusantium dolores inventore obcaecati placeat cum sapiente vel laboriosam similique totam id ducimus aperiam, ratione fuga blanditiis maiores.</p>
+      <a href="#" class="btn w-full text-center">Sign me up</a>
+    </div>
+
+  </div>-->
+
+
+  <!-- Main -->
+  <main id="content" class="bg-white">
+
+    <!-- Hero -->
+    <div class="bg-[url('assets/hero_buslane.jpg')] bg-right bg-cover dark-theme">
+      <div class="bg-gradient-overlay">
+        <div class="container pb-32 pt-36 md:pb-48 md:pt-56 grid grid-cols-2">
+          <div class="col-span-2 md:col-span-1">
+            <h1>A whole new way to grow your revenue</h1>
+            <p class="text-base md:text-lg lg:text-xl mb-12">Buslane makes it easy for new generations of consumers to find and book your buses. That means a steady, effortless stream of new business for you.</p>
+            <a href="#" class="btn modal-toggle">Book a demo</a>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Hero -->
+
+    <!-- Our expertise -->
+    <div class="">
+      <div class="container grid md:grid-cols-2 gap-14 lg:gap-36 section-padding items-center">
+        <div class="grid grid-cols-2 grid-rows-2 gap-4 order-last md:order-first">
+          <div class="h-36 md:h-48 lg:h-56 col-span-2 row-span-1 bg-[url('assets/michael_buses.jpg')] bg-cover bg-bottom"></div>
+          <div class="h-36 md:h-48 lg:h-56 col-span-1 row-span-1 bg-[url('assets/operators_with_buses.jpg')] bg-cover"></div>
+          <div class="h-36 md:h-48 lg:h-56 col-span-1 row-span-1 bg-[url('assets/award_speaker.jpg')] bg-cover bg-right"></div>
+        </div>
+        <div class="">
+          <span class="pre-header">Our expertise</span>
+          <h2 class="mb-10">By operators. For operators.</h2>
+          <img src="assets/quote.svg" alt="quote mark" class="mb-6">
+          <p class="lg:text-xl mb-8">I founded Buslane to help modernize the industry. I believe those closest to the problems are often in the best position to solve them.</p>
+          <p class="font-bold text-gray-900 text-sm md:text-base">Michael Rogers</p>
+          <p class="text-sm md:text-base">President, Beeline Tours</p>
+          <p class="text-sm md:text-base">Operator for 25+ years</p>
+        </div>
+      </div>
+    </div><!-- End Our expertise -->
+
+    <!-- Our value -->
+    <div class="bg-[url('assets/bus-mountain-bg.jpg')] bg-cover bg-center dark-theme">
+      <div class="flat-overlay">
+        <div class="container xl:px-48 section-padding">
+          <div class="flex flex-col items-center md:mb-12">
+            <span class="pre-header text-center">Our value</span>
+            <h2 class="mb-10 text-center">Operators love Buslane</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Item 1 -->
+            <div class="">
+              <div class="bg-flame/50 p-3 w-max rounded-full mb-6">
+                <i data-feather="dollar-sign" class="text-white"></i>
+              </div>
+              <h3>Free to join</h3>
+              <p>You only pay when you accept a booking.</p>
+            </div>
+            <!-- Item 1 -->
+            <div class="">
+              <div class="bg-flame/50 p-3 w-max rounded-full mb-6">
+                <i data-feather="clock" class="text-white"></i>
+              </div>
+              <h3>Save time & money</h3>
+              <p>No need to manage inventory and pricing in multiple places.</p>
+            </div>
+            <!-- Item 1 -->
+            <div class="">
+              <div class="bg-flame/50 p-3 w-max rounded-full mb-6">
+                <i data-feather="trending-up" class="text-white"></i>
+              </div>
+              <h3>Increase utilization</h3>
+              <p>Fill gaps in your dispach by adding new business.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Our value -->
+
+    <!-- How it works -->
+    <div class="bg-white">
+      <div class="container py-10 md:py-14 lg:py-24 xl:pb-14">
+        <div class="flex flex-col items-center">
+          <span class="pre-header text-center">How it works</span>
+          <h2 class="mb-10 text-center">Buslane makes it simple</h2>
+        </div>
+        <div class="pt-8 xl:pt-16 xl:pb-8 2xl:pt-16 2xl:pb-24 grid xl:grid-cols-4 xl:grid-rows-2 gap-x-4 gap-y-6 2xl:gap-y-20 bg-[url('assets/how_it_works_bg_mobile.svg')] xl:bg-[url('assets/how_it_works_bg.svg')] bg-contain xl:bg-cover bg-no-repeat xl:bg-center">
+          <!-- Item 1 -->
+          <div class="flex gap-5 xl:row-start-1 xl:col-start-1">
+            <div>
+              <div class="bg-flame w-12 h-12 rounded-full mb-6 drop-shadow-xl">
+                <div class="flex h-full justify-center items-center	text-white text-xl font-bold">
+                  1
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <h3>Sign up for free</h3>
+              <p>We’ll guide you through a simple, easy setup process. You’ll be up and running in no time!</p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="flex gap-5 xl:row-start-2 xl:col-start-2">
+            <div>
+              <div class="bg-flame w-12 h-12 rounded-full mb-6 drop-shadow-xl">
+                <div class="flex h-full justify-center items-center	text-white text-xl font-bold">
+                  2
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <h3>Start accepting bookings</h3>
+              <p>Easily manage all your bookings in one convenient dashboard.</p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="flex gap-5 xl:row-start-1 xl:col-start-3">
+            <div>
+              <div class="bg-flame w-12 h-12 rounded-full mb-6 drop-shadow-xl">
+                <div class="flex h-full justify-center items-center	text-white text-xl font-bold">
+                  3
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <h3>Deliver exceptional service</h3>
+              <p>Do what you do best and watch your business grow.</p>
+            </div>
+          </div>
+          <!-- Item 1 -->
+          <div class="flex gap-5 xl:row-start-2 xl:col-start-4">
+            <div>
+              <div class="bg-flame w-12 h-12 rounded-full mb-6 drop-shadow-xl">
+                <div class="flex h-full justify-center items-center	text-white text-xl font-bold">
+                  4
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <h3>Get paid</h3>
+              <p>Cha-ching! Expect payment 72 hours after completion of a trip.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End How it works -->
+
+
+    <!-- Testimonials -->
+    <div class="bg-[url('assets/testimonials_bg.jpg')] bg-cover bg-center dark-theme">
+      <div class="flat-overlay">
+        <div class="container section-padding">
+          <div class="flex flex-col items-center lg:mb-12">
+            <span class="pre-header text-center">Testimonials</span>
+            <h2 class="mb-10 text-white text-center">What the industry is saying</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <!-- Quote 1 -->
+            <div class="">
+              <img src="assets/5-stars.svg" alt="5-stars" class="mb-6">
+              <p class="md:text-xl mb-4">This is the solution the industry needs.</p>
+              <p class="text-white font-bold">Peter Pantuso</p>
+              <p class="text-white">President, American Bus Association (ABA)</p>
+            </div>
+            <!-- Quote 2 -->
+            <div class="">
+              <img src="assets/5-stars.svg" alt="5-stars" class="mb-6">
+              <p class="md:text-xl mb-4">This is the solution the industry needs.</p>
+              <p class="text-white font-bold">Peter Pantuso</p>
+              <p class="text-white">President, American Bus Association (ABA)</p>
+            </div>
+            <!-- Quote 3 -->
+            <div class="">
+              <img src="assets/5-stars.svg" alt="5-stars" class="mb-6">
+              <p class="md:text-xl mb-4">This is the solution the industry needs.</p>
+              <p class="text-white font-bold">Peter Pantuso</p>
+              <p class="text-white">President, American Bus Association (ABA)</p>
+            </div>
+            <!-- Quote 4 -->
+            <div class="">
+              <img src="assets/5-stars.svg" alt="5-stars" class="mb-6">
+              <p class="md:text-xl mb-4">This is the solution the industry needs.</p>
+              <p class="text-white font-bold">Peter Pantuso</p>
+              <p class="text-white">President, American Bus Association (ABA)</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- End Testimonials -->
+
+    <!-- CTA -->
+    <div class="bg-gray-900 dark-theme">
+      <div class="container section-padding !pb-4 max-w-2xl flex flex-col items-center">
+          <h2 class="text-center">Supercharge your revenue today with Buslane.</h2>
+          <a href="#" class="btn">Book a demo</a>
+      </div>
+    </div><!-- End CTA -->
+
+    <!-- FAQ -->
+    <div class="bg-gray-900 dark-theme">
+      <div class="container section-padding max-w-4xl">
+        <ul class="accordion list-none">
+          <li>
+            <a class="toggle flex justify-between" href="#">
+              What is Buslane?
+              <i data-feather="plus" class="plus"></i>
+              <i data-feather="minus" class="minus"></i>
+            </a>
+            <div class="inner">
+              <p>Buslane is a managed marketplace connecting buyers with sellers allowing consumers to easily search, compare and book a bus from a local bus company.</p>
+            </div>
+          </li>
+
+          <!-- Question -->
+          <li>
+            <a class="toggle flex justify-between" href="#">
+              How is Buslane different from a bus broker?
+              <i data-feather="plus" class="plus"></i>
+              <i data-feather="minus" class="minus"></i>
+            </a>
+            <div class="inner">
+              <p>Buslane isn't your typical bus broker. Partner with Integrity Tours and create a safe, educational and fun experience your students will never forget! Inspire curiosity with life-changing travel experiences that bring the classroom to life, positively impact the environment, and leave a lighter footprint behind.</p>
+            </div>
+          </li>
+
+          <!-- Question -->
+          <li>
+            <a class="toggle flex justify-between" href="#">
+              Does Buslane work with all bus companies?
+              <i data-feather="plus" class="plus"></i>
+              <i data-feather="minus" class="minus"></i>
+            </a>
+            <div class="inner">
+              <p>The quality of our service is a top priority for us. Therefore, we carefully vet all companies who apply to work with Buslane before they’re featured on our marketplace.</p>
+            </div>
+          </li>
+
+          <!-- Question -->
+          <li>
+            <a class="toggle flex justify-between" href="#">
+              If Buslane is free to join, how does Buslane make money?
+              <i data-feather="plus" class="plus"></i>
+              <i data-feather="minus" class="minus"></i>
+            </a>
+            <div class="inner">
+              <p>Buslane charges a commission for any charters accepted by an operator and the customer pays a small convenience fee on each transaction.</p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </div><!-- End FAQ -->
+
+    <!-- Instagram: replace this section with an Instagram feed plugin -->
+    <div class="bg-gray-900 dark-theme">
+      <div class="container py-4">
+        <h3 class="text-base md:text-lg">Follow <a href="https://www.instagram.com/ridebuslane" target="_blank" class="text-flame">@ridebuslane</a> and tag <a href="https://www.instagram.com/#buslane" target="_blank" class="text-flame">#buslane</a> on Instagram!</h3>
+      </div>
+
+      <!-- ****** Drop plugin shortcode here ****** -->
+      <img src="assets/instagram_placeholder.jpg" alt="" class="w-full">
+      <!-- ****** End Drop plugin shortcode here ****** -->
+
+    </div><!-- End Instagram -->
+
+  </main><!-- End Main -->
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 dark-theme">
+    <div class="container section-padding">
+      <div class="flex flex-col xl:flex-row justify-between gap-10">
+        <div class="flex flex-col md:flex-row xl:flex-col justify-between items-start gap-8 xl:gap-12">
+          <div class="">
+            <img src="assets/buslane_logo_white.png" alt="Buslane Logo" class="h-6 md:h-8 mb-4 md:mb-6">
+            <p class="">Let's grow together.</p>
+          </div>
+          <div class="flex gap-4">
+            <!-- Social Icon -->
+            <a href="https://www.instagram.com/ridebuslane" target="_blank">
+              <div class="bg-flame p-3 w-max rounded-full mb-6 hover:scale-105 transition">
+                <i data-feather="instagram" class="text-white"></i>
+              </div>
+            </a>
+            <!-- Social Icon -->
+            <a href="https://www.linkedin.com/buslane" target="_blank">
+              <div class="bg-flame p-3 w-max rounded-full mb-6 hover:scale-105 transition">
+                <i data-feather="linkedin" class="text-white"></i>
+              </div>
+            </a>
+            <!-- Social Icon -->
+            <a href="https://www.twitter.com/ridebuslane/" target="_blank">
+              <div class="bg-flame p-3 w-max rounded-full mb-6 hover:scale-105 transition">
+                <i data-feather="twitter" class="text-white"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 xl:gap-2">
+          <div class="flex flex-col gap-3 md:gap-4">
+            <h3 class="">Operators</h3>
+            <a href="#">Log in</a>
+            <a href="#">Sign up</a>
+          </div>
+          <div class="flex flex-col gap-3 md:gap-4">
+            <h3 class="">Riders</h3>
+            <a href="#">Log in</a>
+            <a href="#">Sign up</a>
+            <a href="#">FAQs</a>
+          </div>
+          <div class="flex flex-col gap-3 md:gap-4">
+            <h3 class="">Company</h3>
+            <a href="#">Contact us</a>
+            <a href="#">About Buslane</a>
+            <a href="#">Blog</a>
+          </div>
+          <div class="flex flex-col gap-3 md:gap-4">
+            <h3 class="">Support</h3>
+            <div class="flex items-center gap-2">
+              <i data-feather="phone" class="text-flame"></i>
+              <a href="tel:206-555-1234">206.555.1234</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-feather="mail" class="text-flame"></i>
+              <a href="mailto:hello@buslane.com">hello@buslane.com</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-feather="map-pin" class="text-flame"></i>
+              <a href="https://www.google.com/search?rlz=1C5CHFA_enUS874US874&tbm=lcl&sxsrf=APq-WBuihe8QodZeQYN3lKmnJca7fl9H1A:1644971064312&q=pike+place+market&rflfq=1&num=20&stick=H4sIAAAAAAAAAB1SyW0cQRDDPiwY8Esav_qlEOpiHWk4g4WxD0EHBGmVkCJQXI5CbL-m0V0ki-T8vFm_VTIlMOKo9JYozXU37ZE6HVUBKL_rUBsNjoKPVu2uSrhqTEqHTFZ2QNrW4WLQcBV1kluJKPHTMtYC8CVmEEa8BxQW7k2-hPkEb6P5HFFWGcQkhqyhbiLuvMOgOJrr4KmnJ22MB1qoIZ4-GlThSgYPHamt1dYKJLxakwqcPXiorD3Ny1Yh-zroMDo3XmcsAdlbqdFLZ4WlaCqaDu4aNGT0m24ZpMcOVb2cUYrZXsG0Nuk4GdJgWTJR3GaT0jujZS7eTIDyQlfE0q2VyY4Bsjf17dqzc8Lh42xsHSN0zZK4friNcCuSgjV1V4GGlAj5n2rphjG57Rdq5r2O8qLVdgi7Y0Hsg1IM3RillPCfoL5iHcxWuI-mxf5bQpqTu5FodkL8TkGak1ZK-zLUZ3zkVqF88rK1wHLdnJkMvk6nf6dffy7v1_PH2_nl-v754_b14fFy__p0_nu5fz6_PV6u3_h8b5ynAgAA&ved=2ahUKEwjPp9Df-oL2AhXDo4sKHUcJB7QQjHJ6BAhFEAU&rldimm=10660459035763804716" target="_blank">1234 Pike Pl.</br> Seattle, WA 98101</a>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between mt-20 md:mt-48">
+        <p class="text-sm !text-gray-300">© 2022 - Buslane, LLC. All rights reserved.</p>
+        <p class="text-sm"><a href="#" class="!text-gray-300">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Required script for Feather Icons to work. See: https://github.com/feathericons/feather -->
+  <script>
+    feather.replace()
+  </script>
+
+</body>
+</html>

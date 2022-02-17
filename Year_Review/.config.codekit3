@@ -62,7 +62,8 @@
 	"displayValue": "Year Review",
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "brackets-tar",
-	"iconImageWasSetByUser": 0
+	"iconImageWasSetByUser": 0,
+	"lastBuiltDate": 598811655.45541406
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2061,7 +2062,7 @@
 		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
-		"autoOutputPathStyle": 2,
+		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
