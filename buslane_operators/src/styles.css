@@ -31,6 +31,35 @@
 
 }
 
+/* FORM SETTINGS */
+@layer utilities {
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'],
+  textarea {
+    @apply text-base md:text-lg text-white bg-transparent mt-0 block w-full px-0.5 border-0 border-b-2 border-white focus:ring-0 focus:border-flame;
+  }
+
+  input::placeholder{
+    @apply text-gray-500;
+  }
+
+  .form label,
+  .form span {
+    @apply text-white text-base md:text-lg font-bold;
+  }
+
+  [type='radio'] {
+    @apply text-flame focus:ring-flame;
+  }
+
+  .form label.radio span {
+    @apply font-normal;
+  }
+
+}
+
+/* Header menu scrolled class */
 .scrolled {
   @apply bg-gray-900;
 }
@@ -126,30 +155,16 @@ ul li a.toggle.show .plus {
   @apply hidden;
 }
 
+
 /* MODAL */
-.modal {
-  @apply bg-flame p-12 z-50 absolute top-0 left-0 w-full dark-theme;
-  visibility: hidden;
-}
-
-.modal.is-visible {
-  visibility: visible;
-}
-
-.modal-wrapper {
-  @apply p-12 bg-gray-900 fixed top-0 bottom-0 left-0 overflow-y-scroll;
-}
-
-.modal-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1em;
-  background: none;
-  border: 0;
-}
-
-/* MOBILE MENU */
 body.modal-open {
   overflow: hidden;
+}
+
+.filter {
+  @apply z-40 h-screen w-full top-0 left-0 fixed bg-black/70 backdrop-blur;
+}
+
+.modal {
+  @apply z-50 max-w-screen-md md:max-w-xl fixed overflow-auto top-1/2 left-1/2 md:top-[55%] min-h-min	h-screen w-screen translate-y-[-50%] translate-x-[-50%];
 }

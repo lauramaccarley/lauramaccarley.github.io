@@ -33,21 +33,41 @@ jQuery(document).ready(function($) {
     }
   });
 
-  // Modal toggle
-  /*
-  $('.modal-toggle').on('click', function(e) {
-    e.preventDefault();
-    $('.modal').toggleClass('is-visible');
-  });
-  */
-
   // Mobile menu
-
-  // Hambuger menu animation
   $('#mobile-menu').hide();
   $('.mobile-toggle ').click(function() {
     $('#mobile-menu').slideToggle();
     $('body').toggleClass('modal-open');
   });
+
+  // Modal toggle
+  /*
+  $('.modal-toggle').on('click', function(e) {
+    e.preventDefault();
+    $('.modal').toggleClass('is-visible');
+    $('body').toggleClass('modal-open');
+  });*/
+
+  //---------------------------------------------------------
+  // open modal
+  //---------------------------------------------------------
+
+  $('.open-modal').on('click', function() {
+    // fade in filter layer and modal
+    $('.filter, .modal').fadeIn(200);
+    $('body').toggleClass('modal-open');
+  });
+
+  //---------------------------------------------------------
+  // close modal
+  //---------------------------------------------------------
+
+  // close modal by clicking the "close" button or background (outside modal)
+  $('.modal-close, .filter').on('click', function() {
+    // fade out filter layer and modal
+    $('.filter, .modal').fadeOut(200);
+    $('body').toggleClass('modal-open');
+  });
+
 
 });

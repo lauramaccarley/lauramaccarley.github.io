@@ -24,7 +24,7 @@
       <img src="assets/buslane_logo_white.png" alt="Buslane Logo" class="h-6 md:h-8">
       <div class="hidden md:flex justify-between items-center gap-8">
         <a href="#" class="link-text">Sign in</a>
-        <a href="#" class="btn btn-sm btn-outline">Book a demo</a>
+        <button type="button" name="button" class="btn btn-sm btn-outline open-modal">Book a demo</button>
       </div>
       <!-- Hamburger menu icon to open mobile menu -->
       <button aria-label="Open navigation" class="mobile-toggle md:hidden">
@@ -39,29 +39,72 @@
       <i data-feather="x" class="text-white icon-close icon"></i>
     </button>
     <div class="flex flex-col items-center gap-12">
-      <a href="#" class="btn w-full text-center">Book a demo</a>
+      <button type="button" name="button" class="btn w-full open-modal">Book a demo</button>
       <a href="#" class="link-text">Sign in</a>
     </div>
   </div><!-- End Mobile menu -->
 
-  <!-- Modal
-  <div class="modal">
+  <!-- Modal -->
+  <div class="filter" hidden="hidden"></div>
+  <div class="modal" hidden="hidden">
+    <!-- close modal button -->
+    <button class="modal-close absolute top-0 right-0 p-6 z-50">
+      <i data-feather="x" class="text-white icon-close icon"></i>
+    </button>
 
-    <div class="modal-wrapper">
-      <button class="modal-close modal-toggle">
-        <i data-feather="x" class="text-white icon-close icon"></i>
-      </button>
+    <div class="modal-body min-h-screen md:h-fit  drop-shadow-2xl">
+      <!-- Form -->
+      <div class="min-h-screen md:min-h-full md:h-fit bg-gray-900 dark-theme p-10 md:p-14">
+          <h2 class="text-xl md:text-3xl mb-2">Request a Buslane demo today</h2>
+          <p class="mb-4">Fill out the form below and a member of our team will be in touch within 48hrs.</p>
 
-      <h2 class="modal-heading">Apply to be a Buslane operator today</h2>
-      <p>
-        Fill out the form below and a member of our team will be in touch within 48hrs.
-      </p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit eum delectus, libero, accusantium dolores inventore obcaecati placeat cum sapiente vel laboriosam similique totam id ducimus aperiam, ratione fuga blanditiis maiores.</p>
-      <a href="#" class="btn w-full text-center">Sign me up</a>
+          <div class="grid grid-cols-1 gap-6 form">
+            <!-- Name -->
+            <label class="block">
+              <span>Full name</span>
+              <input type="text" placeholder="Jane Doe">
+            </label>
+            <!-- Company Name -->
+            <label class="block">
+              <span>Company name</span>
+              <input type="text" placeholder="Acme Bus Co.">
+            </label>
+            <!-- Phone -->
+            <label class="block">
+              <span>Phone</span>
+              <input type="tel" placeholder="(555) 555-5555">
+            </label>
+            <!-- Email -->
+            <label class="block">
+              <span>Email address</span>
+              <input type="email" placeholder="john@example.com">
+            </label>
+            <!-- Radio select (communication preference) -->
+            <div class="block">
+              <span>Best way to reach you:</span>
+              <div class="mt-2 flex gap-4">
+                <div>
+                  <label class="inline-flex items-center radio">
+                    <input class="form-radio" type="radio" checked="" name="radio-direct" value="1">
+                    <span class="ml-2">Email</span>
+                  </label>
+                </div>
+                <div>
+                  <label class="inline-flex items-center radio">
+                    <input class="form-radio" type="radio" name="radio-direct" value="2">
+                    <span class="ml-2">Phone</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <!-- Submit form button -->
+            <button type="button" name="button" class="btn w-full mt-6">Request a demo</button>
+          </div>
+
+        </div>
     </div>
 
-  </div>-->
-
+  </div>
 
   <!-- Main -->
   <main id="content" class="bg-white">
@@ -73,7 +116,7 @@
           <div class="col-span-2 md:col-span-1">
             <h1>A whole new way to grow your revenue</h1>
             <p class="text-base md:text-lg lg:text-xl mb-12">Buslane makes it easy for new generations of consumers to find and book your buses. That means a steady, effortless stream of new business for you.</p>
-            <a href="#" class="btn modal-toggle">Book a demo</a>
+            <button type="button" name="button" class="btn open-modal">Book a demo</button>
           </div>
         </div>
       </div>
@@ -253,7 +296,7 @@
     <div class="bg-gray-900 dark-theme">
       <div class="container section-padding !pb-4 max-w-2xl flex flex-col items-center">
           <h2 class="text-center">Supercharge your revenue today with Buslane.</h2>
-          <a href="#" class="btn">Book a demo</a>
+          <button type="button" name="button" class="btn open-modal">Book a demo</button>
       </div>
     </div><!-- End CTA -->
 
@@ -280,7 +323,13 @@
               <i data-feather="minus" class="minus"></i>
             </a>
             <div class="inner">
-              <p>Buslane isn't your typical bus broker. Partner with Integrity Tours and create a safe, educational and fun experience your students will never forget! Inspire curiosity with life-changing travel experiences that bring the classroom to life, positively impact the environment, and leave a lighter footprint behind.</p>
+              <p class="mb-4">Buslane isn't your typical bus broker. Here's how we're different:</p>
+              <ol>
+                <li>We don’t price your service, you determine the rate.</li>
+                <li>You own the customer, after accepting a trip Buslane sends you
+                all customer data.</li>
+                <li>We don’t pretend to be a bus company.</li>
+              </ol>
             </div>
           </li>
 
